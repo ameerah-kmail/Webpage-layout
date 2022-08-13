@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage Layout</title>
+</head>
+<script>
+    function addItem() {
+        var ul = document.getElementById("dynamic list");
+        var li = document.createElement("li");
+        li.setAttribute('id', "Dynamic Content");
+        li.appendChild(document.createTextNode("Dynamic Content"));
+        ul.appendChild(li);
+    }
+
+    function removeItem() {
+        document.getElementById("dynamic list").remove();
+    }
+
+  /* 
+function removeItem() {
+    $("#dynamic list").html("");
+}                                                     
+   */      
+</script>
+
+<body>
+
+    <header>
+        <button  onclick="addItem()" class="btn btn-add">Add Content</button>
+        <button onclick="removeItem()" class="btn btn-rem">Remove dynamic Content</button>
+        <ul id="dynamic list">
+        </ul>
+    </header>
+
+    <div class="main-contener">
+        <aside class="item sidebar">
+            <span class="inner-text">left section</span>
+        </aside>
+        <main class="item content">
+            <span class="inner-text">Main Content</span>
+        </main>
+    </div>
+
+    <footer>
+        <span>footer</span>
+    </footer>
+
+
+
+</body>
+
+</html>
